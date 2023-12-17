@@ -1,0 +1,575 @@
+@media (min-width: 1200px) {
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+    
+    .recipe-gallery {
+      width: auto;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+  
+    .recipe-card-cake {
+      margin: 8px;
+      height: 400px;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      overflow: hidden;
+    }
+
+    .recipe-card-roulade {
+      margin: 8px;
+      height: 400px;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      overflow: hidden;
+      }
+
+    .recipe-card-curd-fritter {
+      margin: 8px;
+      height: 400px;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      overflow: hidden;
+    }
+
+    .recipe-card-pie {
+      margin: 8px;
+      height: 400px;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      overflow: hidden;
+    }
+
+    .recipe-card-muffins {
+      margin: 8px;
+      height: 400px;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      overflow: hidden;
+    }
+  
+    .recipe-photo {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+  
+    .recipe-info {
+      padding: 5px;
+      flex-grow: 1;
+    }
+  
+    .separator-line {
+      height: 2px;
+      background-color: #ccc;
+      margin: 10px 0;
+    }
+  
+    .calories {
+      margin-bottom: 5px;
+      padding: 10px;
+      flex-grow: 1;
+    }
+
+    .filter-panel {
+      margin: 8px;
+      height: auto;
+      width: 300px;
+      height: 900px;
+      background-color: #aaa;
+    }
+
+    form input[type="submit"] {
+      display: none;
+  }
+  
+  form input:valid + input[type="submit"] {
+      display: block;
+  }
+   
+  ::placeholder {
+      color: black;
+  }
+   
+  #rb3:checked~.recipe-gallery .recipe-card-cake:not(.cake){
+      display: none;
+  }
+
+  #rb3:checked~.recipe-gallery .recipe-card-roulade:not(.roulade){
+    display: none;
+  }
+
+  #rb3:checked~.recipe-gallery .recipe-card-pie:not(.pie){
+    display: none;
+  }
+
+  #rb3:checked~.recipe-gallery .recipe-card-curd-fritter:not(.curd-fritter){
+  display: none;
+  }
+  
+  #rb4:checked~.recipe-gallery .recipe-card-cake:not(.cake){
+      display: none;
+  }
+
+  #rb4:checked~.recipe-gallery .recipe-card-curd-fritter:not(.curd-fritter){
+    display: none;
+  }
+
+  #rb4:checked~.recipe-gallery .recipe-card-pie:not(.pie){
+    display: none;
+  }
+
+  #rb4:checked~.recipe-gallery .recipe-card-muffins:not(.muffins){
+  display: none;
+  }
+  
+  #rb5:checked~.recipe-gallery .recipe-card-cake:not(.cake){
+      display: none;
+  }
+
+  #rb5:checked~.recipe-gallery .recipe-card-curd-fritter:not(.curd-fritter){
+    display: none;
+  }
+
+  #rb5:checked~.recipe-gallery .recipe-card-muffins:not(.muffins){
+    display: none;
+  }
+
+  #rb5:checked~.recipe-gallery .recipe-card-roulade:not(.roulade){
+    display: none;
+  }
+  
+  #rb6:checked~.recipe-gallery .recipe-card-cake:not(.cake){
+      display: none;
+  }
+
+  #rb6:checked~.recipe-gallery .recipe-card-roulade:not(.roulade){
+    display: none;
+  }  
+  
+  #rb6:checked~.recipe-gallery .recipe-card-muffins:not(.muffins){
+    display: none;
+  }
+
+  #rb6:checked~.recipe-gallery .recipe-card-pie:not(.pie){
+    display: none;
+  }
+
+  #rb7:checked~.recipe-gallery .recipe-card-muffins:not(.muffins){
+      display: none;
+  }
+  
+  #rb7:checked~.recipe-gallery .recipe-card-pie:not(.pie){
+    display: none;
+  }
+
+  #rb7:checked~.recipe-gallery .recipe-card-roulade:not(.roulade){
+    display: none;
+  }
+
+  #rb7:checked~.recipe-gallery .recipe-card-curd-fritter:not(.curd-fritter){
+    display: none;
+  }
+
+  .button-style {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px 5px;
+
+    background-color: #979797;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  input {
+    display: none;
+  }
+
+}
+  
+  /* Стилі для планшетної версії (від 730px до 1200px) */
+  @media (min-width: 730px) and (max-width: 1199px) {
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .recipe-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      border: 1px solid #ccc;
+    }
+
+    .recipe-card-cake {
+        margin: 8px;
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        overflow: hidden;
+      }
+
+      .recipe-card-roulade {
+        margin: 8px;
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        }
+  
+    .recipe-card-curd-fritter {
+        margin: 8px;
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        overflow: hidden;
+    }
+  
+      .recipe-card-pie {
+        margin: 8px;
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        overflow: hidden;
+    }
+  
+      .recipe-card-muffins {
+        margin: 8px;
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        overflow: hidden;
+    }
+
+    .recipe-info {
+        padding: 5px;
+        flex-grow: 1;
+    }
+  
+    .recipe-card {
+      height: 350px;
+      border: 1px solid #ccc;
+    }
+  
+    .recipe-photo {
+      height: 150px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .separator-line {
+      display: none;
+    }
+    
+    .calories {
+      display: none;
+    }
+
+    form input[type="submit"] {
+      display: none;
+  }
+  
+  form input:valid + input[type="submit"] {
+      display: block;
+  }
+   
+  ::placeholder {
+      color: black;
+  }
+   
+  #rb3:checked~.recipe-gallery .recipe-card-cake:not(.cake){
+      display: none;
+  }
+
+  #rb3:checked~.recipe-gallery .recipe-card-roulade:not(.roulade){
+    display: none;
+  }
+
+  #rb3:checked~.recipe-gallery .recipe-card-pie:not(.pie){
+    display: none;
+  }
+
+  #rb3:checked~.recipe-gallery .recipe-card-curd-fritter:not(.curd-fritter){
+  display: none;
+  }
+  
+  #rb4:checked~.recipe-gallery .recipe-card-cake:not(.cake){
+      display: none;
+  }
+
+  #rb4:checked~.recipe-gallery .recipe-card-curd-fritter:not(.curd-fritter){
+    display: none;
+  }
+
+  #rb4:checked~.recipe-gallery .recipe-card-pie:not(.pie){
+    display: none;
+  }
+
+  #rb4:checked~.recipe-gallery .recipe-card-muffins:not(.muffins){
+  display: none;
+  }
+  
+  #rb5:checked~.recipe-gallery .recipe-card-cake:not(.cake){
+      display: none;
+  }
+
+  #rb5:checked~.recipe-gallery .recipe-card-curd-fritter:not(.curd-fritter){
+    display: none;
+  }
+
+  #rb5:checked~.recipe-gallery .recipe-card-muffins:not(.muffins){
+    display: none;
+  }
+
+  #rb5:checked~.recipe-gallery .recipe-card-roulade:not(.roulade){
+    display: none;
+  }
+  
+  #rb6:checked~.recipe-gallery .recipe-card-cake:not(.cake){
+      display: none;
+  }
+
+  #rb6:checked~.recipe-gallery .recipe-card-roulade:not(.roulade){
+    display: none;
+  }  
+  
+  #rb6:checked~.recipe-gallery .recipe-card-muffins:not(.muffins){
+    display: none;
+  }
+
+  #rb6:checked~.recipe-gallery .recipe-card-pie:not(.pie){
+    display: none;
+  }
+
+  #rb7:checked~.recipe-gallery .recipe-card-muffins:not(.muffins){
+      display: none;
+  }
+  
+  #rb7:checked~.recipe-gallery .recipe-card-pie:not(.pie){
+    display: none;
+  }
+
+  #rb7:checked~.recipe-gallery .recipe-card-roulade:not(.roulade){
+    display: none;
+  }
+
+  #rb7:checked~.recipe-gallery .recipe-card-curd-fritter:not(.curd-fritter){
+    display: none;
+  }
+
+  .button-style {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px 5px;
+
+    background-color: #979797;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  input {
+    display: none;
+  }
+
+  }
+  
+  @media (max-width: 729px) {
+
+    .image-container {
+        margin-top: 10px;
+        height: auto;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+      }
+    
+    .recipe-gallery {
+      flex-direction: column;
+      border: 1px solid #ccc;
+    }
+  
+    .recipe-card {
+      height: auto;
+      margin-bottom: 20px;
+    }
+  
+    .recipe-photo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 95%;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-left: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .separator-line {
+        display: none;
+      }
+      
+    .calories {
+        display: none;
+    }
+
+    .recipe-info {
+        display: none;
+    }
+
+    form input[type="submit"] {
+      display: none;
+  }
+  
+  form input:valid + input[type="submit"] {
+      display: block;
+  }
+   
+  ::placeholder {
+      color: black;
+  }
+   
+  #rb3:checked~.recipe-gallery .recipe-card-cake:not(.cake){
+      display: none;
+  }
+
+  #rb3:checked~.recipe-gallery .recipe-card-roulade:not(.roulade){
+    display: none;
+  }
+
+  #rb3:checked~.recipe-gallery .recipe-card-pie:not(.pie){
+    display: none;
+  }
+
+  #rb3:checked~.recipe-gallery .recipe-card-curd-fritter:not(.curd-fritter){
+  display: none;
+  }
+  
+  #rb4:checked~.recipe-gallery .recipe-card-cake:not(.cake){
+      display: none;
+  }
+
+  #rb4:checked~.recipe-gallery .recipe-card-curd-fritter:not(.curd-fritter){
+    display: none;
+  }
+
+  #rb4:checked~.recipe-gallery .recipe-card-pie:not(.pie){
+    display: none;
+  }
+
+  #rb4:checked~.recipe-gallery .recipe-card-muffins:not(.muffins){
+  display: none;
+  }
+  
+  #rb5:checked~.recipe-gallery .recipe-card-cake:not(.cake){
+      display: none;
+  }
+
+  #rb5:checked~.recipe-gallery .recipe-card-curd-fritter:not(.curd-fritter){
+    display: none;
+  }
+
+  #rb5:checked~.recipe-gallery .recipe-card-muffins:not(.muffins){
+    display: none;
+  }
+
+  #rb5:checked~.recipe-gallery .recipe-card-roulade:not(.roulade){
+    display: none;
+  }
+  
+  #rb6:checked~.recipe-gallery .recipe-card-cake:not(.cake){
+      display: none;
+  }
+
+  #rb6:checked~.recipe-gallery .recipe-card-roulade:not(.roulade){
+    display: none;
+  }  
+  
+  #rb6:checked~.recipe-gallery .recipe-card-muffins:not(.muffins){
+    display: none;
+  }
+
+  #rb6:checked~.recipe-gallery .recipe-card-pie:not(.pie){
+    display: none;
+  }
+
+  #rb7:checked~.recipe-gallery .recipe-card-muffins:not(.muffins){
+      display: none;
+  }
+  
+  #rb7:checked~.recipe-gallery .recipe-card-pie:not(.pie){
+    display: none;
+  }
+
+  #rb7:checked~.recipe-gallery .recipe-card-roulade:not(.roulade){
+    display: none;
+  }
+
+  #rb7:checked~.recipe-gallery .recipe-card-curd-fritter:not(.curd-fritter){
+    display: none;
+  }
+
+  .button-style {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px 5px;
+
+    background-color: #979797;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  input {
+    display: none;
+  }
+  }
+  
